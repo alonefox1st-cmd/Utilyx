@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: utilyx
+Version: 0.1.0
+Summary: A lightweight Python utility module for config loading, writing, and safe exits.
+Author-email: Your Name <your@email.com>
+License: MIT
+Project-URL: Homepage, https://github.com/alonefox1st-cmd/utilyx
+Project-URL: Repository, https://github.com/alonefox1st-cmd/utilyx
+Project-URL: Issues, https://github.com/alonefox1st-cmd/utilyx/issues
+Keywords: utility,config,json,ini,tools
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Utilyx
+
+A lightweight Python utility module providing simple helpers for configuration loading, configuration writing, safe exiting, and standardized printing. Designed to be minimal, readable, and easy to drop into any project.
+
+---
+
+## Features
+
+- Unified `Print` wrapper for consistent output  
+- Graceful exit helpers (`quit` and `Exit`)  
+- Config loader supporting JSON and INI  
+- Config writer supporting JSON and INI  
+- Clean error messages instead of raw exceptions  
+
+---
+
+## Installation
+
+```bash
+pip install utilyx
