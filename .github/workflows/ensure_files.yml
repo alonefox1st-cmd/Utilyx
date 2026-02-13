@@ -1,0 +1,2 @@
+- name: List workspace
+  run: ls -R .
