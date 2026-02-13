@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-utilyx/__init__.py
-utilyx/utilyx.py
-utilyx.egg-info/PKG-INFO
-utilyx.egg-info/SOURCES.txt
-utilyx.egg-info/dependency_links.txt
-utilyx.egg-info/top_level.txt
