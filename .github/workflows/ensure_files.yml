@@ -1,2 +1,5 @@
-- name: List workspace
-  run: ls -R .
+- name: Ensure required files exist
+  run: |
+    test -f pyproject.toml
+    test -f README.md
+    test -d utilyx

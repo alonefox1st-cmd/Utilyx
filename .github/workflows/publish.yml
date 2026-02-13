@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Clean dist folder
+        run: rm -rf dist
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
