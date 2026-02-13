@@ -1,5 +1,25 @@
-- name: Ensure required files exist
-  run: |
-    test -f pyproject.toml
-    test -f README.md
-    test -d utilyx
+name: Ensure Required Files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  check-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure required files exist
+        run: |
+          echo "Checking for pyproject.toml..."
+          test -f pyproject.toml || { echo 'Missing pyproject.toml'; exit 1; }
+
+          echo "Checking for README.md..."
+          test -f README.md || { echo 'Missing README.md'; exit 1; }
+
+          echo "Checking for utilyx package folder..."
+          test -d utilyx || { echo 'Missing utilyx/ folder'; exit 1; }
+
+          echo "All required files are present."."
