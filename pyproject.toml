@@ -17,9 +17,6 @@ Homepage = "https://github.com/alonefox1st-cmd/utilyx"
 Repository = "https://github.com/alonefox1st-cmd/utilyx"
 Issues = "https://github.com/alonefox1st-cmd/utilyx/issues"
 
-[tool.setuptools.packages.find]
-where = ["."]
-
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
