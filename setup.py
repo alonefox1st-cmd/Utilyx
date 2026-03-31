@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="utilyx",
-    version="1.0.1",
-    description="A lightweight Python utility module for config loading, writing, and safe exits.",
+    version="1.0.2",
+    description="A lightweight Python utility module for config loading, writing, and safe exits, with fdb support.",
     author="alonefox",
     author_email="alonefox_1st@hotmail.com",
     url="https://github.com/alonefox1st-cmd/utilyx",
