@@ -1,4 +1,4 @@
-# Utilyx V1.0.1
+# Utilyx V1.0.2
 
 A lightweight Python utility module providing simple helpers for configuration loading, configuration writing, safe exiting, and standardized printing. Designed to be minimal, readable, and easy to drop into any project.
 
