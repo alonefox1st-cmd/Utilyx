@@ -3,7 +3,6 @@ import json #imports the dep for loading JSON files
 import os #for file operations such as delete_file
 import tkinter as tk #imports what's required for gui
 import sys
-import PySide6
 #============logic============
 
 def Print(msg): #makes it easy for new devs so it doesn't matter if they forget python is cap sensitive
@@ -114,7 +113,7 @@ def writefile(type="txt", filename="logs.txt", data=None):
             errorui(message="ERROR code is:80040265(unknown or unreadable file) we cant read this file", error_code="80040265")
             return f"sorry, we don't support '{type}' yet. please wait till next update."
 def write_file(type="txt", filename="logs.txt", data=None):
-    writefile(type, filename, data)
+    return writefile(type, filename, data)
 
 def loadfile(type="txt", filename="logs.txt"):
     if type == "txt":
@@ -143,7 +142,7 @@ def loadfile(type="txt", filename="logs.txt"):
             errorui(message="ERROR code is:80040265(unknown and unreadable file) we cant read this file", error_code="80040265")
             return f"sorry, we don't support '{type}' yet. please wait till next update."
 def load_file(type="txt", filename="logs.txt"):
-    loadfile(type, filename)
+    return loadfile(type, filename)
 
 def errorui(error_code=1, message="UtilyX_Default", message_font="Arial", message_font_size=12, button_font="Arial", button_font_size=12, button_highlight_background="black", button_highlight_color="green", button_active_background="blue", button_active_foreground="white",button_disabledfg="gray", button_fg="black", button_bg="lightgray", bgcolor="red", fgcolor="black", uiheight_resize=True, uiwidth_resize=True, windowsize="500x300"):
     def on_button_click():
@@ -189,6 +188,7 @@ def error_ui(error_code=1, message="UtilyX_Default", message_font="Arial", messa
 def native_error_ui(error_message="UtilyX_Default", error_code=1):
     if error_message == "UtilyX_Default":
         error_message = f"Hay, we've ran into a unexpected error ({error_code}), close this window to end the task."
+    import PySide6
 
     def on_exit_pressed():
         raise SystemExit(error_code)
@@ -215,3 +215,6 @@ def native_error_ui(error_message="UtilyX_Default", error_code=1):
 
     window.show()
     app.exec()
+def nativeerrorui(error_message="UtilyX_Default", error_code=1):
+    return native_error_ui(error_message="UtilyX_Default", error_code=1)
+        
