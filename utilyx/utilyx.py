@@ -185,7 +185,7 @@ def errorui(error_code=1, message="UtilyX_Default", message_font="Arial", messag
 def error_ui(error_code=1, message="UtilyX_Default", message_font="Arial", message_font_size=12, button_font="Arial", button_font_size=12, button_highlight_background="black", button_highlight_color="green", button_active_background="blue", button_active_foreground="white", button_disabledfg="gray", button_fg="black", button_bg="lightgray", bgcolor="red", fgcolor="black", uiheight_resize=True, uiwidth_resize=True, windowsize="500x300"):
     errorui(error_code=error_code, message=message, message_font=message_font, message_font_size=message_font_size, button_font=button_font, button_font_size=button_font_size, button_highlight_background=button_highlight_background, button_highlight_color=button_highlight_color, button_active_background=button_active_background, button_active_foreground=button_active_foreground, button_disabledfg=button_disabledfg, button_fg=button_fg, button_bg=button_bg, bgcolor=bgcolor, fgcolor=fgcolor, uiheight_resize=uiheight_resize, uiwidth_resize=uiwidth_resize, windowsize=windowsize)
 
-def native_error_ui(error_message="UtilyX_Default", error_code=1):
+def basicerrorui(error_message="UtilyX_Default", error_code=1):
     if error_message == "UtilyX_Default":
         error_message = f"Hay, we've ran into a unexpected error ({error_code}), close this window to end the task."
     import PySide6
@@ -215,6 +215,6 @@ def native_error_ui(error_message="UtilyX_Default", error_code=1):
 
     window.show()
     app.exec()
-def nativeerrorui(error_message="UtilyX_Default", error_code=1):
+def basic_error_ui(error_message="UtilyX_Default", error_code=1):
     return native_error_ui(error_message="UtilyX_Default", error_code=1)
         
